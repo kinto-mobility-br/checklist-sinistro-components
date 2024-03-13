@@ -1,4 +1,4 @@
-import './SignatureCanvas.css'
+import '../styles.css'
 
 import { Button } from 'antd'
 import React, { useRef } from 'react'
