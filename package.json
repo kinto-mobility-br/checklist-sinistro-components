@@ -1,5 +1,5 @@
 {
-  "name": "@kintobrasil/checklist-sinistro-components",
+  "name": "kinto-brasil-checklist-sinistro-components",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/cjs/index.js",
