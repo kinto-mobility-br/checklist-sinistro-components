@@ -7,7 +7,7 @@
   "types": "./dist/esm/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashimizu-kinto/checklist-sinistro-components.git"
+    "url": "git+https://github.com/kinto-mobility-br/checklist-sinistro-components.git"
   },
   "peerDependencies": {
     "react": ">=18"
