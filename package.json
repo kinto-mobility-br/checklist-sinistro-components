@@ -1,9 +1,9 @@
 {
   "name": "@kintobrasil/kinto-brasil-checklist-sinistro-components",
-  "version": "1.0.0",
+  "version": "1.1.25",
   "description": "",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
   "types": "./dist/esm/index.d.ts",
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
     "react": ">=18"
   },
   "files": [
+    "lib",
     "dist",
     "LICENSE",
     "README.md"
@@ -24,21 +25,25 @@
   ],
   "license": "MIT",
   "author": "Kinto Mobility Brazil (kintobrasil)",
-
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prebuild": "rm -rf dist && rm -rf lib",
+    "build": "webpack --mode production",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "test": "jest --config jestconfig.json"
   },
   "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-react": "^7.23.3",
     "@testing-library/react": "^14.2.1",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.2.65",
     "@types/react-signature-canvas": "^1.0.5",
+    "@types/typescript": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.10.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-config-standard-with-typescript": "^43.0.1",
@@ -55,11 +60,17 @@
     "jest-environment-jsdom": "^29.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "style-loader": "^3.3.4",
     "ts-jest": "^29.1.2",
-    "typescript": "^5.4.2"
+    "ts-loader": "^9.5.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.4.2",
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "antd": "^5.15.2",
+    "browser-image-compression": "^2.0.2",
     "react-signature-canvas": "^1.0.6"
   }
 }

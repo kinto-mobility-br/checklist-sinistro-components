@@ -1,3 +1,59 @@
+/* || UploadList */
+.uploadlist-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+div[class^='uploadlist-item'] {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 70px;
+  background-color: #CFEDF0;
+  border: 1px solid #16A3B8;
+  border-radius: 10%;
+  font-size: 80%;
+
+  cursor: pointer;
+}
+
+.uploadlist-item-mandatory::after {
+  content: "Obrigatório"
+}
+
+.uploadlist-item-optional {
+  background-color: #F2FAFA !important;
+}
+
+.uploadlist-item-optional::after {
+  content: "Opcional"
+}
+
+div[class^='uploadlist-item']:hover {
+  background-color: #9FDAE0 !important;
+}
+
+div[class^='uploadlist-item'] > :nth-child(1) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div[class^='uploadlist-item'] > :nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  color: #9A9A9A;
+
+  word-break: keep-all;
+  text-wrap: nowrap;
+  text-align: center;
+}
+/* ... */
+
+/* || SignatureCanvas */
 .signature-pad-workspace {
   width: 100%;
   height: 100%;
@@ -12,3 +68,40 @@
 .signature-pad-container > canvas {
   width: 100%;
 }
+/* ... */
+
+/* || SelectBadges */
+.select-badges-group > span{
+  font-size: large;
+  width: 100%;
+}
+
+.select-badges-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.select-badge-item {
+  flex: 1 0 140px;
+
+  max-width: fit-content;
+  padding: 5px 20px;
+  border-radius: 80px;
+  background-color: #F2FAFA;
+  color: #9AC7D0;
+
+  text-align: center;
+}
+
+.select-badge-item:hover {
+  
+  background-color: #CFEDF0;
+  color: #00708D;
+}
+
+.select-badge-item:active, .select-badge-item-selected {
+  background-color: #00708D !important;
+  color: #fff !important;
+}
+/* ... */
